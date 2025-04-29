@@ -1,0 +1,34 @@
+[
+      {
+        "title": "Moon Knight",
+        "year": 2022,
+        "image": "./assets/images/series-1.png",
+        "badge": "2K",
+        "duration": "47 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "Halo",
+        "year": 2022,
+        "image": "./assets/images/series-2.png",
+        "badge": "2K",
+        "duration": "59 min",
+        "rating": "8.8"
+      },
+      {
+        "title": "Vikings: Valhalla",
+        "year": 2022,
+        "image": "./assets/images/series-3.png",
+        "badge": "2K",
+        "duration": "51 min",
+        "rating": "8.3"
+      },
+      {
+        "title": "Money Heist",
+        "year": 2017,
+        "image": "./assets/images/series-4.png",
+        "badge": "4K",
+        "duration": "70 min",
+        "rating": "8.3"
+      }
+]

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieDB - Best movie collections</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="top">
+  <header class="header">
+    <div class="container">
+      <div class="overlay"></div>
+
+      <a href="" class="logo">
+        <img src="assets\images\logo.svg" alt="MovieDB logo">
+      </a>
+
+      <div class="header-actions">
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+            <option value="au">AU</option>
+            <option value="ar">AR</option>
+            <option value="tu">TU</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary">Sign in</button>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="" class="logo">
+            <img src="./assets/images/logo.svg" alt="Filmlane logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Movie</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Tv Show</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Web Series</a>
+          </li>
+          <li>
+            <a href="#" class="navbar-link">Pricing</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="hero">
+        <div class="carousel-container" id="carouselContainer">
+          <div class="carousel" id="carousel">
+            <div class="carousel-movie">
+              <figure class="carousel-movie-background">
+                <img class="show" id="carouselMovieBackground" src="" alt=""/>
+              </figure>
+              <div class="intro show" id="intro">
+                  <div class="word">
+                      <h3 class="carousel-movie-title" id="carouselMovieTitle"></h3>
+                      <p  class="carousel-movie-description"  id="carouselMovieDescription"></P>
+                  </div>
+                  <div class="video">
+                      <video class="trailer" id="trailer" src="" autoplay loop muted controls></video> 
+                  </div>
+              </div>
+              <div class="action">
+                  <button class="watch-button">Watch Now</button>
+              </div>
+            </div>
+          </div>
+          <ul class="carousel-list" id="carouselList">
+
+          </ul>
+        </div>
+      </section>
+
+
+      <section class="upcoming">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">
+              <p class="section-subtitle">Online Streaming</p>
+
+              <h2 class="h2 section-title">Upcoming Movies</h2>
+            </div>
+
+            <ul class="filter-list">
+
+              <li>
+                <button class="filter-btn">Movies</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">TV Shows</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">Anime</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="movies-list-type1  has-scrollbar" id="upcomingMovies">
+          </ul> 
+
+        </div>
+      </section>
+
+
+      <section class="top-rated">
+        <div class="container">
+
+          <p class="section-subtitle">Online Streaming</p>
+
+          <h2 class="h2 section-title">Top Rated Movies</h2>
+
+          <ul class="filter-list">
+
+            <li>
+              <button class="filter-btn">Movies</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">TV Shows</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Documentary</button>
+            </li>
+
+            <li>
+              <button class="filter-btn">Sports</button>
+            </li>
+
+          </ul>
+
+          <ul class="movies-list-type2" id="topRatedMovies">
+          </ul>
+
+
+        </div>
+      </section>
+
+
+
+      <section class="tv-series">
+        <div class="container">
+
+          <p class="section-subtitle">Best TV Series</p>
+
+          <h2 class="h2 section-title">World Best TV Series</h2>
+
+          <ul class="movies-list-type1" id="tvSeries">
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <section class="cta">
+        <div class="container">
+
+          <div class="title-wrapper">
+            <h2 class="cta-title">Trial start first 30 days.</h2>
+
+            <p class="cta-text">
+              Enter your email to create or restart your membership.
+            </p>
+          </div>
+
+          <form action="" class="cta-form">
+            <input type="email" name="email" required placeholder="Enter your email" class="email-field">
+
+            <button type="submit" class="cta-form-btn">Get started</button>
+          </form>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand-wrapper">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Filmlane logo">
+          </a>
+
+          <ul class="footer-list">
+
+            <li>
+              <a href="./index.html" class="footer-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Movie</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">TV Show</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Web Series</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Pricing</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quicklink-wrapper">
+
+          <ul class="quicklink-list">
+
+            <li>
+              <a href="#" class="quicklink-link">Faq</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Terms of use</a>
+            </li>
+
+            <li>
+              <a href="#" class="quicklink-link">Privacy</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+ 
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="./assets/jsfiles/card-logical.js"></script>
+  <script src="./assets/jsfiles/hero-carousel.js"></script>
+</body>
+
+</html>
