@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Mission: Impossible - The Final Reckoning",
+    "year": 2025,
+    "image": "./assets/images/upcoming-1.png",
+    "badge": "4K",
+    "duration": "169 min",
+    "rating": "NR"
+  },
+  {
+    "title": "Thunderbolts*",
+    "year": 2025,
+    "image": "./assets/images/upcoming-2.png",
+    "badge": "4K",
+    "duration": "127 min",
+    "rating": "8.1"
+  },
+  {
+    "title": "HIT: The Third Case",
+    "year": 2025,
+    "image": "./assets/images/upcoming-3.png",
+    "badge": "4K",
+    "duration": "153 min",
+    "rating": "NR"
+  },
+  {
+    "title": "Mufasa: The Lion King",
+    "year": 2024,
+    "image": "./assets/images/upcoming-4.png",
+    "badge": "2K",
+    "duration": "118 min",
+    "rating": "7.4"
+  }
+]

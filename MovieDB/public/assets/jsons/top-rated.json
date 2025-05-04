@@ -1,0 +1,226 @@
+[
+      {
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "image": "./assets/images/movie-1.jpg",
+        "badge": "4K",
+        "duration": "142 min",
+        "rating": "9.3"
+      },
+      {
+        "title": "The Godfather",
+        "year": 1972,
+        "image": "./assets/images/movie-2.jpg",
+        "badge": "4K",
+        "duration": "175 min",
+        "rating": "9.2"
+      },
+      {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "image": "./assets/images/movie-3.jpg",
+        "badge": "4K",
+        "duration": "152 min",
+        "rating": "9.0"
+      },
+      {
+        "title": "The Godfather: Part II",
+        "year": 1974,
+        "image": "./assets/images/movie-4.jpg",
+        "badge": "4K",
+        "duration": "202 min",
+        "rating": "9.0"
+      },
+      {
+        "title": "12 Angry Men",
+        "year": 1957,
+        "image": "./assets/images/movie-5.jpg",
+        "badge": "HD",
+        "duration": "96 min",
+        "rating": "9.0"
+      },
+      {
+        "title": "Schindler's List",
+        "year": 1993,
+        "image": "./assets/images/movie-6.jpg",
+        "badge": "HD",
+        "duration": "195 min",
+        "rating": "9.0"
+      },
+      {
+        "title": "The Lord of the Rings: The Return of the King",
+        "year": 2003,
+        "image": "./assets/images/movie-7.jpg",
+        "badge": "4K",
+        "duration": "201 min",
+        "rating": "8.9"
+      },
+      {
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "image": "./assets/images/movie-8.jpg",
+        "badge": "4K",
+        "duration": "154 min",
+        "rating": "8.9"
+      },
+      {
+        "title": "The Empire Strikes Back",
+        "year": 1980,
+        "image": "./assets/images/movie-9.jpg",
+        "badge": "HD",
+        "duration": "124 min",
+        "rating": "8.7"
+      },
+      {
+        "title": "The Dark Knight Rises",
+        "year": 2012,
+        "image": "./assets/images/movie-10.jpg",
+        "badge": "HD",
+        "duration": "164 min",
+        "rating": "8.4"
+      },
+      {
+        "title": "Fight Club",
+        "year": 1999,
+        "image": "./assets/images/movie-11.jpg",
+        "badge": "HD",
+        "duration": "139 min",
+        "rating": "8.8"
+      },
+      {
+        "title": "Inception",
+        "year": 2010,
+        "image": "./assets/images/movie-12.jpg",
+        "badge": "HD",
+        "duration": "148 min",
+        "rating": "8.8"
+      },
+      {
+        "title": "Star Wars: Episode IV - A New Hope",
+        "year": 1977,
+        "image": "./assets/images/movie-13.jpg",
+        "badge": "4K",
+        "duration": "121 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "The Matrix",
+        "year": 1999,
+        "image": "./assets/images/movie-14.jpg",
+        "badge": "4K",
+        "duration": "136 min",
+        "rating": "8.7"
+      },
+      {
+        "title": "Forrest Gump",
+        "year": 1994,
+        "image": "./assets/images/movie-15.jpg",
+        "badge": "HD",
+        "duration": "142 min",
+        "rating": "8.8"
+      },
+      {
+        "title": "The Shining",
+        "year": 1980,
+        "image": "./assets/images/movie-16.jpg",
+        "badge": "HD",
+        "duration": "146 min",
+        "rating": "8.4"
+      },
+      {
+        "title": "The Usual Suspects",
+        "year": 1995,
+        "image": "./assets/images/movie-17.jpg",
+        "badge": "HD",
+        "duration": "106 min",
+        "rating": "8.5"
+      },
+      {
+        "title": "Se7en",
+        "year": 1995,
+        "image": "./assets/images/movie-18.jpg",
+        "badge": "HD",
+        "duration": "127 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "The Silence of the Lambs",
+        "year": 1991,
+        "image": "./assets/images/movie-19.jpg",
+        "badge": "HD",
+        "duration": "118 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "American History X",
+        "year": 1998,
+        "image": "./assets/images/movie-20.jpg",
+        "badge": "HD",
+        "duration": "119 min",
+        "rating": "8.5"
+      },
+      {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "year": 2004,
+        "image": "./assets/images/movie-21.jpg",
+        "badge": "4K",
+        "duration": "142 min",
+        "rating": "8.4"
+      },
+      {
+        "title": "La La Land",
+        "year": 2016,
+        "image": "./assets/images/movie-22.jpg",
+        "badge": "HD",
+        "duration": "128 min",
+        "rating": "8.0"
+      },
+      {
+        "title": "Spirited Away",
+        "year": 2001,
+        "image": "./assets/images/movie-23.jpg",
+        "badge": "HD",
+        "duration": "125 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "Whiplash",
+        "year": 2014,
+        "image": "./assets/images/movie-24.jpg",
+        "badge": "4K",
+        "duration": "107 min",
+        "rating": "8.5"
+      },
+      {
+        "title": "Django Unchained",
+        "year": 2012,
+        "image": "./assets/images/movie-25.jpg",
+        "badge": "4K",
+        "duration": "165 min",
+        "rating": "8.4"
+      },
+      {
+        "title": "Gladiator",
+        "year": 2000,
+        "image": "./assets/images/movie-26.jpg",
+        "badge": "HD",
+        "duration": "155 min",
+        "rating": "8.5"
+      },
+      {
+        "title": "The Green Mile",
+        "year": 1999,
+        "image": "./assets/images/movie-27.jpg",
+        "badge": "HD",
+        "duration": "189 min",
+        "rating": "8.6"
+      },
+      {
+        "title": "The Social Network",
+        "year": 2010,
+        "image": "./assets/images/movie-28.jpg",
+        "badge": "4K",
+        "duration": "120 min",
+        "rating": "8.0"
+      }
+]
