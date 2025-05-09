@@ -170,6 +170,8 @@ onMounted(async () => {
   .intro{
     width: 80vw;
     margin: auto;
+    margin-top: 0;
+    margin-bottom:0 ;
   }
   .intro div .word{
     min-width: 400px;
@@ -198,7 +200,7 @@ onMounted(async () => {
   
   .intro{
     width: 100vw;
-    padding-top: 150px;
+    padding-top: 80px;
   }
 }
 

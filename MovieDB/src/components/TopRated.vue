@@ -8,7 +8,7 @@
       <h2 class="h2 section-title">Top Rated Movies</h2>
 
       <ul
-        class="filter-list d-flex justify-content-center align-items-center gap-3"
+        class="filter-list d-flex justify-content-center align-items-center gap-3 p-0"
       >
         <li>
           <button class="filter-btn">Movies</button>
@@ -96,8 +96,8 @@ onMounted(async () => {
   font-size: var(--fs-10);
   font-weight: var(--fw-700);
   color: var(--light-gray);
-  font-size: var(--fs-11);
-  padding: 17px 25px;
+  font-size: var(--fs-12);
+  padding: 8px 13px;
   border-radius: 4px;
   background: var(--rich-black-fogra-39);
   border: none;
@@ -130,6 +130,11 @@ onMounted(async () => {
   .movies-list-type {
     grid-template-columns: repeat(3, 1fr);
   }
+  .top-rated .container .filter-list .filter-btn {
+  font-size: var(--fs-11);
+  padding: 17px 25px;
+  }
+
 }
 
 @media (min-width: 992px) {
