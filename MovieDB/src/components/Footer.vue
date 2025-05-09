@@ -58,7 +58,16 @@
             recommendations.
           </p>
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Your email" />
+            <input
+              type="email"
+              class="form-control"
+              :class="{ 'focus-border': isTyping }"
+              placeholder="Your email"
+              v-model="email"
+              @blur="validateEmail"
+              @input="checkEmail"
+              @change="validateEmail"
+            />
             <button
               class="btn btn-primary"
               type="button"
@@ -70,28 +79,59 @@
               Subscribe
             </button>
           </div>
+          <p v-if="emailError" class="text-danger">{{ emailError }}</p>
+          <p v-if="emailChecklist" class="text-success">{{ emailChecklist }}</p>
         </div>
       </div>
+    </div>
 
-      <hr class="mt-5 mb-4" />
+    <hr class="mt-5 mb-4" />
 
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0">&copy; 2025 MovieDB. All rights reserved.</p>
-        </div>
-        <div
-          class="col-md-6 text-center text-md-end d-flex justify-content-center justify-content-md-end"
-        >
-          <a href="#" class="text-white me-3">Privacy Policy</a>
-          <a href="#" class="text-white me-3">Terms of Service</a>
-          <a href="#" class="text-white">Contact Us</a>
-        </div>
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; 2025 MovieDB. All rights reserved.</p>
+      </div>
+      <div
+        class="col-md-6 text-center text-md-end d-flex justify-content-center justify-content-md-end"
+      >
+        <a href="#" class="text-white me-3">Privacy Policy</a>
+        <a href="#" class="text-white me-3">Terms of Service</a>
+        <a href="#" class="text-white">Contact Us</a>
       </div>
     </div>
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const email = ref("");
+const emailError = ref("");
+const emailChecklist = ref("");
+const isTyping = ref(false);
+
+const validateEmail = () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value)) {
+    emailError.value = "Please enter a valid email address.";
+    emailChecklist.value = "";
+  } else {
+    emailError.value = "";
+    emailChecklist.value = "✔ Email format looks good!";
+  }
+  isTyping.value = false; // Stop typing state on blur or change
+};
+
+const checkEmail = () => {
+  if (email.value) {
+    emailChecklist.value = "✔ Typing...";
+    isTyping.value = true; // Set typing state to true
+  } else {
+    emailChecklist.value = "";
+    isTyping.value = false; // Reset typing state when input is cleared
+  }
+};
+</script>
 
 <style scoped>
 .footer a {
@@ -100,5 +140,19 @@
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.focus-border {
+  border: 3px solid #f59e0b !important; /* Orange border when typing */
+  box-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
+  outline: none;
 }
 </style>
