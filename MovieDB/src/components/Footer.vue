@@ -57,7 +57,20 @@
             Subscribe to our newsletter for the latest movie news and
             recommendations.
           </p>
-          <form class="input-group mb-3" @submit.prevent="">
+          <div class="mb-3">
+            <!-- Name input field -->
+            <input
+              type="text"
+              class="form-control mb-2"
+              :class="{ 'focus-border': isNameTyping }"
+              placeholder="Your name"
+              v-model="name"
+              @input="checkName"
+              @blur="stopNameTyping"
+            />
+          </div>
+          <div class="mb-3">
+            <!-- Email input field -->
             <input
               type="email"
               class="form-control"
@@ -68,17 +81,19 @@
               @input="checkEmail"
               @change="validateEmail"
             />
-            <button
-              class="btn btn-primary"
-              type="submit"
-              style="
-                background: linear-gradient(to right, #f59e0b, #ec4899);
-                border: none;
-              "
-            >
-              Subscribe
-            </button>
-          </form>
+          </div>
+          <button
+            class="btn btn-primary"
+            type="button"
+            style="
+              background: linear-gradient(to right, #f59e0b, #ec4899);
+              border: none;
+            "
+            @click="validateForm"
+          >
+            Subscribe
+          </button>
+          <p v-if="nameError" class="text-danger">{{ nameError }}</p>
           <p v-if="emailError" class="text-danger">{{ emailError }}</p>
           <p v-if="emailChecklist" class="text-success">{{ emailChecklist }}</p>
         </div>
@@ -105,10 +120,13 @@
 <script setup>
 import { ref } from "vue";
 
+const name = ref("");
 const email = ref("");
+const nameError = ref("");
 const emailError = ref("");
 const emailChecklist = ref("");
 const isTyping = ref(false);
+const isNameTyping = ref(false);
 
 const validateEmail = () => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -125,11 +143,30 @@ const validateEmail = () => {
 const checkEmail = () => {
   if (email.value) {
     emailChecklist.value = "✔ Typing...";
-    isTyping.value = true; 
+    emailError.value = ""; // Clear email error while typing
+    isTyping.value = true; // Set typing state
   } else {
     emailChecklist.value = "";
-    isTyping.value = false;
+    isTyping.value = false; // Reset typing state
   }
+};
+
+const checkName = () => {
+  if (name.value) {
+    nameError.value = ""; // Clear name error while typing
+    isNameTyping.value = true; // Set typing state for name
+  } else {
+    isNameTyping.value = false; // Reset typing state for name
+  }
+};
+
+const stopNameTyping = () => {
+  isNameTyping.value = false; // Stop typing state for name on blur
+};
+
+const validateForm = () => {
+  nameError.value = name.value.trim() === "" ? "Name cannot be empty." : "";
+  validateEmail();
 };
 </script>
 
@@ -143,10 +180,12 @@ const checkEmail = () => {
 }
 
 .text-danger {
+  padding-top: 1rem;
   color: #dc3545;
 }
 
 .text-success {
+  padding-top: 1rem;
   color: #28a745;
 }
 
