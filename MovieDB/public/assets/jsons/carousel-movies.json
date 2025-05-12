@@ -3,6 +3,7 @@
     "id": 0,
     "title": "Your Name.",
     "poster": "/assets/images/carousel-resources/movie-1-poster.jpg",
+    "landscape":"/assets/images/carousel-resources/movie-1-landscape-poster.jpg",
     "trailer": "/assets/images/carousel-resources/movie-1-trailer.mp4",
     "background": "/assets/images/carousel-resources/movie-1-background.jpg",
     "description": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly."
@@ -11,6 +12,7 @@
     "id": 1,
     "title": "Moana 2",
     "poster": "/assets/images/carousel-resources/movie-2-poster.jpg",
+    "landscape":"/assets/images/carousel-resources/movie-2-landscape-poster.jpg",
     "trailer": "/assets/images/carousel-resources/movie-1-trailer.mp4",
     "background": "/assets/images/carousel-resources/movie-2-background.jpg",
     "description": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced."
@@ -19,6 +21,7 @@
     "id": 2,
     "title": "ASH",
     "poster": "/assets/images/carousel-resources/movie-3-poster.jpg",
+    "landscape":"/assets/images/carousel-resources/movie-2-landscape-poster.jpg",
     "trailer": "/assets/images/carousel-resources/movie-1-trailer.mp4",
     "background": "/assets/images/carousel-resources/movie-3-background.jpg",
     "description": "HA woman wakes up on a distant planet and finds the crew of her space station viciously killed. Her investigation into what happened sets in motion a terrifying chain of events."
@@ -27,9 +30,18 @@
     "id": 3,
     "title": "Havoc",
     "poster": "/assets/images/carousel-resources/movie-4-poster.jpg",
+    "landscape":"/assets/images/carousel-resources/movie-2-landscape-poster.jpg",
+    "trailer": "/assets/images/carousel-resources/movie-1-trailer.mp4",
+    "background": "/assets/images/carousel-resources/movie-4-background.jpg",
+    "description": "When a drug heist swerves lethally out of control, a jaded cop fights his way through a corrupt city's criminal underworld to save a politician's son."
+  },
+  {
+    "id": 4,
+    "title": "Havoc",
+    "poster": "/assets/images/carousel-resources/movie-4-poster.jpg",
+    "landscape":"/assets/images/carousel-resources/movie-2-landscape-poster.jpg",
     "trailer": "/assets/images/carousel-resources/movie-1-trailer.mp4",
     "background": "/assets/images/carousel-resources/movie-4-background.jpg",
     "description": "When a drug heist swerves lethally out of control, a jaded cop fights his way through a corrupt city's criminal underworld to save a politician's son."
   }
-
 ]

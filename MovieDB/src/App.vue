@@ -4,6 +4,7 @@ import Hero from './components/Hero.vue';
 import Upcoming from './components/Upcoming.vue';
 import TopRated from './components/TopRated.vue';
 import TvSeries from './components/TvSeries.vue';
+import QA from './components/QA.vue';
 import Footer from './components/Footer.vue';
 </script>
 
@@ -18,6 +19,9 @@ import Footer from './components/Footer.vue';
       <TopRated></TopRated>
       <TvSeries></TvSeries>
     </article>
+    <section>
+      <QA></QA>
+    </section>
   </main>
   <Footer></Footer>
  </body>

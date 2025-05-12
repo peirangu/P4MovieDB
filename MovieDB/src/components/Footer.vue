@@ -57,7 +57,7 @@
             Subscribe to our newsletter for the latest movie news and
             recommendations.
           </p>
-          <div class="input-group mb-3">
+          <form class="input-group mb-3" @submit.prevent="">
             <input
               type="email"
               class="form-control"
@@ -70,7 +70,7 @@
             />
             <button
               class="btn btn-primary"
-              type="button"
+              type="submit"
               style="
                 background: linear-gradient(to right, #f59e0b, #ec4899);
                 border: none;
@@ -78,7 +78,7 @@
             >
               Subscribe
             </button>
-          </div>
+          </form>
           <p v-if="emailError" class="text-danger">{{ emailError }}</p>
           <p v-if="emailChecklist" class="text-success">{{ emailChecklist }}</p>
         </div>
@@ -119,16 +119,16 @@ const validateEmail = () => {
     emailError.value = "";
     emailChecklist.value = "✔ Email format looks good!";
   }
-  isTyping.value = false; // Stop typing state on blur or change
+  isTyping.value = false;
 };
 
 const checkEmail = () => {
   if (email.value) {
     emailChecklist.value = "✔ Typing...";
-    isTyping.value = true; // Set typing state to true
+    isTyping.value = true; 
   } else {
     emailChecklist.value = "";
-    isTyping.value = false; // Reset typing state when input is cleared
+    isTyping.value = false;
   }
 };
 </script>
@@ -151,7 +151,7 @@ const checkEmail = () => {
 }
 
 .focus-border {
-  border: 3px solid #f59e0b !important; /* Orange border when typing */
+  border: 3px solid #f59e0b !important;
   box-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
   outline: none;
 }

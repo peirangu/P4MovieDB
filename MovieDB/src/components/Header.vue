@@ -32,7 +32,7 @@
         </button>
 
         <!-- Main navigation -->
-        <div class="collapse navbar-collapse" id="navbarContent">
+        <nav class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <!-- Movies dropdown -->
             <li class="nav-item dropdown">
@@ -158,7 +158,7 @@
               Sign In
             </button>
           </div>
-        </div>
+        </nav>
       </div>
     </nav>
   </header>
