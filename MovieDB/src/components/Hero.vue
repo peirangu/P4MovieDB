@@ -1,16 +1,13 @@
 <template>
-  <section class="hero">
-    <div class="position-relative d-flex flex-column justify-content-center">
+  <section class="hero rounded m-auto mt-3 m-lg-0">
+    <div class="position-relative d-flex flex-column justify-content-center align-items-center">
       <div class="carousel position-relative d-flex flex-column">
         <figure class="position-absolute w-100 m-0">
           <transition name="fade">
-            <img
-              v-if="isTransitioning"
-              class="carousel-movie-background w-100"
-              :src="currentMovie.background"
-              :alt="currentMovie.title"
-              key="currentMovie.id"
-            />
+            <img v-if="windowWidth>=992" v-show ="isTransitioning" class="carousel-movie-background w-100" :src="currentMovie.background"
+              :alt="currentMovie.title"  />
+            <img v-else v-show ="isTransitioning" class="carousel-movie-background w-100" :src="currentMovie.landscape"
+              :alt="currentMovie.title" key="currentMovie.id"/>
           </transition>
         </figure>
 
@@ -18,7 +15,9 @@
           class="intro d-none d-none d-lg-flex position-relative row align-items-center justify-content-center text-white g-5 show"
         >
           <div class="col-6 col-xl-5">
-            <div class="word">
+            <div 
+            @mouseover="stopAutoPlay" @mouseout="resumeAutoPlay" 
+            class="word">
               <h3 class="mb-3">{{ currentMovie.title }}</h3>
               <p class="">{{ currentMovie.description }}</p>
             </div>
@@ -31,27 +30,16 @@
             </div>
           </div>
           <div class="offset-xl-1 col-6 col-xl-5">
-            <video
-              class="trailer w-100 rounded-5"
-              :src="currentMovie.trailer"
-              autoplay
-              loop
-              muted
-              controls
-            ></video>
+            <video 
+            @mouseover="stopAutoPlay" @mouseout="resumeAutoPlay" 
+            class="trailer w-100 rounded-5" :src="currentMovie.trailer" autoplay loop muted controls></video>
           </div>
         </div>
 
-        <ul
-          class="carousel-list d-none d-xl-flex position-relative d-flex justify-content-center gap-3 w-50 mt-5"
-        >
-          <li
-            v-for="movie in movies"
-            :key="movie.id"
-            class="bg-dark bg-opacity-75 rounded overflow-hidden shadow-sm text-white text-center w-25"
-            @mouseover="handleHover(movie.id)"
-            @mouseout="resumeAutoPlay"
-          >
+        <ul class="carousel-list d-none d-xl-flex position-relative d-flex justify-content-center gap-3 mt-5">
+          <li v-for="movie in movies" :key="movie.id"
+            class="carousel-list-element poster bg-dark bg-opacity-75 rounded overflow-hidden text-white text-center w-25"
+            @mouseover="handleHover(movie.id)" @mouseout="resumeAutoPlay">
             <figure class="mb-2">
               <img
                 class="w-100 img-fluid rounded-top"
@@ -70,8 +58,7 @@
             v-for="movie in movies"
             :key="movie.id"
             class="bg-dark bg-opacity-75 rounded overflow-hidden shadow-sm text-white text-center w-25"
-            :class="{ 'bg-white text-dark': movie.id === currentMovie.id }"
-          >
+            :class="{'bg-white': movie.id === currentMovie.id }">
             <span class="mid-list-element"></span>
           </li>
         </ul>
@@ -99,12 +86,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted, render } from "vue";
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+const windowWidth = ref(document.documentElement.clientWidth);
 const movies = ref([]);
 const currentIndex = ref(0);
 const currentMovie = ref({});
 const isTransitioning = ref(true);
 let timer = null;
+
+function updateWindowWidth(){
+  windowWidth.value = document.documentElement.clientWidth;
+};
 
 function renderMovie(id) {
   const movie = movies.value.find((m) => m.id === id);
@@ -121,11 +113,15 @@ function startAutoPlay() {
   timer = setInterval(() => {
     currentIndex.value = (currentIndex.value + 1) % movies.value.length;
     renderMovie(movies.value[currentIndex.value].id);
-  }, 5000);
+  }, 5000)
+}
+
+function stopAutoPlay() {
+  clearInterval(timer);
 }
 
 function handleHover(id) {
-  clearTimeout(timer);
+  clearInterval(timer);
   timer = setTimeout(() => {
     renderMovie(id);
     currentIndex.value = movies.value.findIndex((m) => m.id === id);
@@ -136,38 +132,45 @@ function resumeAutoPlay() {
   startAutoPlay();
 }
 
-function showPrev() {
-  clearTimeout(timer);
-  currentIndex.value =
-    (currentIndex.value - 1 + movies.value.length) % movies.value.length;
+function showPrev(){
+  clearInterval(timer);
+  currentIndex.value = (currentIndex.value - 1 + movies.value.length) % movies.value.length;
   renderMovie(movies.value[currentIndex.value].id);
   startAutoPlay();
 }
 
-function showNext() {
-  clearTimeout(timer);
+function showNext(){
+  clearInterval(timer);
   currentIndex.value = (currentIndex.value + 1) % movies.value.length;
   renderMovie(movies.value[currentIndex.value].id);
   startAutoPlay();
 }
 
 onMounted(async () => {
-  const res = await fetch("/assets/jsons/carousel-movies.json");
+  window.addEventListener('resize', updateWindowWidth);
+  const res = await fetch('/assets/jsons/carousel-movies.json');
   movies.value = await res.json();
   currentMovie.value = movies.value[0];
   startAutoPlay();
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateWindowWidth);
 });
+
 </script>
 
 <style scoped>
 .hero {
+  width: 95%;
   overflow: hidden;
   position: relative;
-  background: var(--rich-black-fogra-39);
+  background: var(--gunmetal-1);
 }
 
 .intro {
   min-height: 500px;
+  z-index: 1;
 }
 
 .intro div .word {
@@ -177,6 +180,17 @@ onMounted(async () => {
 .tralier {
   aspect-ratio: 16 / 9;
   width: 100%;
+}
+.carousel-list{
+  width: 60%;
+}
+.carousel-list-element{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.carousel-list-element:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .carousel-list-element figure img {
@@ -223,9 +237,15 @@ onMounted(async () => {
   }
 }
 
-@media (min-width: 992px) {
-  .mid-list {
-    position: relative;
+@media (min-width: 992px){
+  .hero{
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  .mid-list{
+    position:relative
   }
 }
 

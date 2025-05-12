@@ -137,7 +137,7 @@ const validateEmail = () => {
     emailError.value = "";
     emailChecklist.value = "✔ Email format looks good!";
   }
-  isTyping.value = false; // Stop typing state on blur or change
+  isTyping.value = false;
 };
 
 const checkEmail = () => {
@@ -190,7 +190,7 @@ const validateForm = () => {
 }
 
 .focus-border {
-  border: 3px solid #f59e0b !important; /* Orange border when typing */
+  border: 3px solid #f59e0b !important;
   box-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
   outline: none;
 }

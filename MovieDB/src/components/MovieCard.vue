@@ -6,10 +6,10 @@
       </figure>
       <div class="title-wrapper w-100 d-flex justify-content-between mt-2">
         <p class="text-white fw-bold small">{{ movie.title }}</p>
-        <time class="text-warning small">{{ movie.year }}</time>
+        <time class=" small">{{ movie.year }}</time>
       </div>
       <div class="w-100 d-flex justify-content-between gap-2 mt-1">
-        <div class="badge py-1 px-2 border border-white text-warning small">
+        <div class="badge py-1 px-2 border border-white small">
           {{ movie.badge }}
         </div>
         <div class="d-flex align-items-center ms-auto text-white small">
@@ -148,7 +148,7 @@ const props = defineProps({
 @media (min-width: 1200px) {
   .movie-card {
     width: 300px;
-    height: 550px;
+    height: 570px;
   }
 
   .card-banner {

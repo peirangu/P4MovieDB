@@ -54,11 +54,11 @@ const currentData = computed(()=>{
 
 onMounted(async () => {
     const resMovie = await fetch('/assets/jsons/upcoming.json');
-    mediaData.movies = await resMovie.json()
+    mediaData.movies = await resMovie.json();
     const resTV = await fetch('/assets/jsons/world-best-TV-series.json');
-    mediaData.tvSeries = await resTV.json()
+    mediaData.tvSeries = await resTV.json();
     const resAnime = await fetch('/assets/jsons/world-best-TV-series.json');
-    mediaData.animes = await resAnime.json()
+    mediaData.animes = await resAnime.json();
 })
 
 </script>

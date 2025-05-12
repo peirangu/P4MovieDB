@@ -1,0 +1,28 @@
+[
+      {
+        "question": "How to register an account?",
+        "answer": "Click the 'Register' button at the top right of the website, enter your email and password, and follow the instructions to complete the registration process."
+      },
+      {
+        "question": "How to find movies?",
+        "answer": "You can use the search bar at the top to enter the movie title, or browse various movie categories."
+      },
+      {
+        "question": "How to watch a movie?",
+        "answer": "After finding the movie you're interested in, click on the movie poster to go to the details page, then click the 'Watch' button to start watching."
+      },
+      {
+        "question": "Can I download movies?",
+        "answer": "Some movies support downloading. You can check the movie details page to see if a download option is available."
+      },
+      {
+        "question": "How to cancel my subscription?",
+        "answer": "Go to the account settings page, select 'Subscription Management,' and click the 'Cancel Subscription' button to cancel."
+      },
+      {
+        "question": "How to recover my account password?",
+        "answer": "Click the 'Forgot Password?' link on the login page, enter your registered email, and follow the instructions in the email to reset your password."
+      }
+]
+
+  
